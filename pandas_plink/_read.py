@@ -334,10 +334,9 @@ def _read_file(fn, read_func, pbar):
 
 
 def _read_csv(fn, header) -> DataFrame:
-
     df = read_csv(
         fn,
-        delim_whitespace=True,
+        sep="\s+",
         header=None,
         names=list(header.keys()),
         dtype=header,
